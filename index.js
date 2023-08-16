@@ -1,5 +1,5 @@
 const activeListItems = document.getElementsByClassName("list-item");
- tabcontents=document.getElementsByClassName("tab-contents");
+const tabcontents=document.getElementsByClassName("tab-contents");
 function opentab(tabname){
     for(activeListItem of activeListItems){
         activeListItem.classList.remove("active");
@@ -52,7 +52,7 @@ function playpause() {
     }
 }
 
-if(song.play()) {
+if(!song.pause()) {
     setInterval(() => {
         progress.value = song.currentTime
     },500);
@@ -63,4 +63,15 @@ progress.onchange = function() {
     song.currentTime=progress.value;
     ctrl.classList.add("fa-pause");
     ctrl.classList.remove("fa-play");
+}
+
+
+const containers = document.getElementById("c1");
+const myVideo = document.getElementById("myVideo");
+
+function playvid(videoname){
+    myVideo.src = "/resources/"+videoname+".mp4";
+    myVideo.play();
+    containers.classList.remove("no");
+    containers.classList.add("yes");
 }
