@@ -74,7 +74,6 @@
                     <div onclick="prev()"><i class="fa-solid fa-backward-step"></i></div>
                     <div onclick="playpause()"><i class="fa-solid fa-play" id="ctrl-icon"></i></div>
                     <div onclick="next()"><i class="fa-solid fa-forward-step"></i></div>
-                    <div id="vol"></div>
                 </div>
             </div>
         </div>
@@ -141,7 +140,7 @@
                 </div>
                 <div>
                     <h1>Volume</h1>
-                    <input id="vol-control" type="range" class="range" min="0" max="100" value="100" onchange="thisVolume(this.value)"></input>
+                    <input type="range" class="range" min="0" max="100" step="10" value="100" oninput="thisVolume(this.value)" ></input>
                 </div>
             </div>
         </div>

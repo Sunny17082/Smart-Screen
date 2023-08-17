@@ -84,9 +84,8 @@ function fun(e){
 }
 
 function thisVolume(volume_value){
-    var myvideo = document.getElementById("myvideo");
-    var mySong = document.getElementById("song");
-    document.getElementById("vol").innerHTML=volume_value;
-    myvideo.volume = volume_value / 100;
-    mySong.volume = volume_value / 100;
+    var myvid = document.getElementById("myVideo");
+    var song = document.getElementById("song");
+    myvid.volume = volume_value / 100;
+    song.volume = volume_value / 100;
 }
