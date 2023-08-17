@@ -233,7 +233,6 @@ nav .circle{
 
 .no-border{
     border: none;
-    transform: scale(1.01);
 }
 
 .app:hover img{
@@ -285,4 +284,37 @@ video{
 
 .facebook{
     background-color: #fff;
+}
+
+#settings{
+    width: 100%;
+}
+
+.setting{
+    width: 100%;
+    padding: 35px;
+}
+
+.range{
+    appearance: none;
+    width: 77%;
+    height: 6px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 19px 0;   
+}
+
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #000000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid #fff;    
+}
+
+.setting div{
+    margin-top: 15px;
 }

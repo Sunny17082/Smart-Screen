@@ -65,7 +65,6 @@ progress.onchange = function() {
     ctrl.classList.remove("fa-play");
 }
 
-
 const containers = document.getElementById("c1");
 const myVideo = document.getElementById("myVideo");
 
@@ -74,4 +73,20 @@ function playvid(videoname){
     myVideo.play();
     containers.classList.remove("no");
     containers.classList.add("yes");
+}
+
+function fun(e){
+    var container = document.getElementById('container-main');
+    var c1 = document.getElementById('c1');
+    var val = e.value;
+    container.setAttribute("style", "filter: brightness("+val+"%);");
+    c1.setAttribute("style", "filter: brightness("+val+"%);");
+}
+
+function thisVolume(volume_value){
+    var myvideo = document.getElementById("myvideo");
+    var mySong = document.getElementById("song");
+    document.getElementById("vol").innerHTML=volume_value;
+    myvideo.volume = volume_value / 100;
+    mySong.volume = volume_value / 100;
 }
