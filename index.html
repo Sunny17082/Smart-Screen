@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="hero gradient-background">
-        <div id="container-main" class="container">
+        <div id="container-main" class="container no">
     
             <!-- sidebar -->
     
@@ -210,8 +210,15 @@
             <!-- messages -->
 
             <div class="tab-contents" id="messages">
-                <div class="message">
-                    <h1>Hello</h1>
+                <div class="message-area">
+                    <div class="incoming message">
+                        <h4>Mr. XYZ</h4>
+                        <p>Hello</p>
+                    </div>
+                </div>
+                <div class="send">
+                    <textarea id="textarea" cols="30" rows="1" placeholder="Write your message"></textarea>
+                    <button onclick="sendMessage(textarea.value)">Send</button>
                 </div>
             </div>
         </div>
@@ -229,7 +236,7 @@
             </div>
         </div>
 
-        <div id="cPowerOn" class="containerPowerOn no">
+        <div id="cPowerOn" class="containerPowerOn">
             <div class="mode">
                 <i onclick="powerOn()" class="fa-solid fa-power-off icon-style"></i>
             </div>
